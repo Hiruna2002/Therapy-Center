@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="528.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.ReceptionistDashboardController">
+   <children>
+      <AnchorPane fx:id="ReceptionistAnc" layoutX="222.0" prefHeight="528.0" prefWidth="573.0" />
+      <AnchorPane prefHeight="528.0" prefWidth="223.0" style="-fx-background-color: greenyellow;">
+         <children>
+            <JFXButton layoutX="4.0" layoutY="162.0" onAction="#therapySessionOnAction" prefHeight="66.0" prefWidth="161.0" style="-fx-background-color: greenyellow;" text="Therapy Session" textFill="#a18989">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="14.0" layoutY="214.0" onAction="#paymentOnAction" prefHeight="76.0" prefWidth="96.0" style="-fx-background-color: greenyellow;" text="Payments" textFill="#a18989">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="4.0" layoutY="94.0" onAction="#patientOnAction" prefHeight="76.0" prefWidth="96.0" style="-fx-background-color: greenyellow;" text="Patient" textFill="#a18989">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="4.0" layoutY="284.0" onAction="#patientHistoryOnAction" prefHeight="57.0" prefWidth="152.0" style="-fx-background-color: greenyellow;" text="Patient History" textFill="#a18989">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="24.0" layoutY="29.0" text="Receptionist">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogout" layoutX="62.0" layoutY="424.0" mnemonicParsing="false" onAction="#btnLogoutOnNavigateTo" style="-fx-background-color: greenyellow;" text="Logout" textFill="#2f08f5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

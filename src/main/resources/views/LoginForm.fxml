@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: whiite;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.LoginFormController">
+   <children>
+      <Label layoutX="142.0" layoutY="40.0" text="Serenity Mental Health Therapy Center">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="108.0" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="166.0" text="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Line endX="341.0" layoutX="235.0" layoutY="83.0" startX="-206.0" />
+<!--      <JFXTextField fx:id="txtName" layoutX="186.0" layoutY="106.0" prefHeight="25.0" prefWidth="140.0" promptText="name" />-->
+      <Button fx:id="txtLogin" layoutX="157.0" layoutY="289.0" mnemonicParsing="false" onAction="#loginOnAction" prefHeight="21.0" prefWidth="218.0" style="-fx-background-color: black; -fx-border-radius: 200px;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="94.0" layoutY="223.0" text="User Role">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbUserRole" layoutX="186.0" layoutY="221.0" prefHeight="25.0" prefWidth="140.0" promptText="Select Job Role" />
+      <TextField fx:id="txtName" layoutX="182.0" layoutY="106.0" />
+      <PasswordField fx:id="txtPassword" layoutX="182.0" layoutY="164.0" />
+<!--      <JFXPasswordField fx:id="txtPassword" layoutX="189.0" layoutY="164.0" promptText="password" />-->
+   </children>
+</AnchorPane>

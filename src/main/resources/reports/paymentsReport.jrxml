@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="paymentsReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="944bf100-71fe-4b7e-b745-8b6828a022a8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (7)"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM payments]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<field name="patient" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="patient"/>
+		<property name="com.jaspersoft.studio.field.label" value="patient"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<field name="payment" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="payment"/>
+		<property name="com.jaspersoft.studio.field.label" value="payment"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<field name="theropy" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="theropy"/>
+		<property name="com.jaspersoft.studio.field.label" value="theropy"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<field name="patients_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="patients_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="patients_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<field name="therapists_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="therapists_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="therapists_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="payments"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="20" width="196" height="30" uuid="b254ef1a-e7ce-4dbc-acff-9ab40cd8bc35"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payments Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="81" height="30" uuid="48c174e9-2b34-46ba-80d3-9351658ecbff">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a1fea0a-8c14-47c0-954f-e8240be141bb"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="0" width="79" height="30" uuid="33dcc33d-ab34-4b70-b763-ae316ceaf5e5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0df24053-5e7c-45b5-8962-5ddec0bfa6f4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[payment]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="79" height="30" uuid="9a83c633-1e62-465f-b2ac-ec1b7d02f42d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="277b25a8-7b3f-416d-bc38-a2ca7d74f8d6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[status]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="0" width="79" height="30" uuid="dac9acd1-6fc5-470a-bcb8-33c2b4fc80dd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd0c1d7c-24ab-455f-a61b-91f9226f852e"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[patients_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="79" height="30" uuid="a235a345-42e7-4e92-acb4-2654844681cc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0522b84-7474-4cfa-8c50-57b33689cbd1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[therapists_id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="30" width="79" height="30" uuid="c0fafd44-6db7-40c4-a4b9-a76d3892aee2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0df24053-5e7c-45b5-8962-5ddec0bfa6f4"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{payment}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="30" width="81" height="30" uuid="5faecca8-c120-4908-b6b0-09b20d493754">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a1fea0a-8c14-47c0-954f-e8240be141bb"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="30" width="79" height="30" uuid="fe616055-e818-41e6-ae1a-1903890ffd56">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="277b25a8-7b3f-416d-bc38-a2ca7d74f8d6"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="30" width="79" height="30" uuid="019ec96c-6c4c-43db-b8ab-e64947f98ab2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0522b84-7474-4cfa-8c50-57b33689cbd1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{therapists_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="30" width="79" height="30" uuid="f05e26d9-0934-4607-a948-022d34c96317">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd0c1d7c-24ab-455f-a61b-91f9226f852e"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="2.0"/>
+					<leftPen lineWidth="2.0"/>
+					<bottomPen lineWidth="2.0"/>
+					<rightPen lineWidth="2.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{patients_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

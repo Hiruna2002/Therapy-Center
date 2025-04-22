@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentInvoiceManagementController">
+   <children>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="409.0" layoutY="195.0" onAction="#saveOnAction" style="-fx-background-color: yellow;" text="Save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+<!--      <JFXTextField fx:id="txtPayment" layoutX="280.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="cost" text="payment" />-->
+      <TextField fx:id="txtPayment" layoutX="280.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="cost" text="payment" />
+      <TableView fx:id="tblPayment" layoutX="47.0" layoutY="243.0" onMouseClicked="#tableOnAction" prefHeight="149.0" prefWidth="507.0">
+         <columns>
+            <TableColumn fx:id="colTherapy" prefWidth="141.0" text="Theropy" />
+            <TableColumn fx:id="colPatient" prefWidth="129.0" text="Patient" />
+            <TableColumn fx:id="colPayment" prefWidth="132.0" text="Payement" />
+            <TableColumn fx:id="colStatus" prefWidth="104.0" text="Status" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="cmbTherapy" layoutX="33.0" layoutY="147.0" prefHeight="25.0" prefWidth="100.0" promptText="theropy" />
+      <ComboBox fx:id="cmbPatient" layoutX="152.0" layoutY="147.0" prefHeight="25.0" prefWidth="100.0" promptText="patient" />
+      <JFXButton buttonType="RAISED" layoutX="388.0" layoutY="399.0" onAction="#generateReportOnAction" style="-fx-background-color: red;" text="Generate Report">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="47.0" layoutY="90.0" text="Id:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblId" layoutX="83.0" layoutY="97.0" text="Label" />
+      <TextField fx:id="txtStatus" layoutX="412.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="status" text="status" />
+      <JFXButton buttonType="RAISED" layoutX="478.0" layoutY="195.0" onAction="#resetOnAction" style="-fx-background-color: lightgreen;" text="Reset">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutY="-1.0" prefHeight="83.0" prefWidth="600.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="170.0" layoutY="25.0" text="Payment &amp; Invoice Management">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

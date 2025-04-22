@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PatientTheropyHistoryController">
+   <children>
+      <TableView fx:id="tblTherapySession" layoutX="35.0" layoutY="132.0" prefHeight="193.0" prefWidth="537.0">
+         <columns>
+            <TableColumn fx:id="colTherapy" prefWidth="96.0" text="Therapy" />
+            <TableColumn fx:id="colPatient" prefWidth="97.0" text="Patient" />
+            <TableColumn fx:id="colProgram" prefWidth="133.0" text="Program" />
+            <TableColumn fx:id="colCost" prefWidth="100.0" text="Cost" />
+            <TableColumn fx:id="colDescription" prefWidth="110.0" text="Decription" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="-3.0" layoutY="-4.0" prefHeight="93.0" prefWidth="607.0" style="-fx-background-color: lightblue;">
+         <children>
+            <Label layoutX="204.0" layoutY="31.0" text="Patient Theropy History">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
