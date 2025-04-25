@@ -8,5 +8,5 @@ import java.io.IOException;
 import java.util.List;
 
 public interface PatientsDAO extends CrudDAO<Patients> {
-    List<Patients> search(String text) throws IOException;
+
 }

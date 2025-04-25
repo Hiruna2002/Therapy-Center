@@ -44,16 +44,4 @@ public class PatientManagementBOImpl implements PatientManagementBO {
     public boolean deletePatient(String text) throws IOException {
         return patientsDAO.delete(text);
     }
-
-    @Override
-    public List<PatientsDTO> searchPatient(String text) throws IOException {
-        List<Patients> search = patientsDAO.search(text);
-        List<PatientsDTO> patientsDTOS = new ArrayList<>();
-
-        for (Patients patients:search){
-            patientsDTOS.add(new PatientsDTO(patients.getName(),patients.getDuration(),patients.getCost(),patients.getDescription()));
-        }
-
-        return patientsDTOS;
-    }
 }

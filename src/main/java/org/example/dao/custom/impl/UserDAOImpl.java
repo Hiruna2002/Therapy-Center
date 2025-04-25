@@ -12,9 +12,9 @@ import java.util.List;
 
 public class UserDAOImpl implements UserDAO {
     public List checkUser(Users users) throws IOException {
-        System.out.println(users.getName());
-        System.out.println(users.getPassword());
-        System.out.println(users.getJobRole());
+//        System.out.println(users.getName());
+//        System.out.println(users.getPassword());
+//        System.out.println(users.getJobRole());
         Session session = FactoryConfiguration.getInstance().openSession();
         List<Users> list = session.
                 createQuery("from Users u where u.name = :name AND u.jobRole = :role", Users.class).setParameter("name", users.getName()).

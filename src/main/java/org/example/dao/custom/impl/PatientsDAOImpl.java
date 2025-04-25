@@ -72,17 +72,6 @@ public class PatientsDAOImpl implements PatientsDAO {
     }
 
     @Override
-    public List<Patients> search(String text) throws IOException {
-        Session session = FactoryConfiguration.getInstance().openSession();
-
-        return session.createQuery("FROM Patients p WHERE p.name like :name OR p.duration like :duration " +
-                "OR p.description like :description").
-                setParameter("name",text).setParameter("duration",text).
-                setParameter("description",text).list();
-
-    }
-
-    @Override
     public Patients getbyId(int patient) throws IOException {
         Session session = FactoryConfiguration.getInstance().openSession();
         Patients patients = session.get(Patients.class, patient);

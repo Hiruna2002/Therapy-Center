@@ -21,9 +21,9 @@ public class TherapySessionSchedulingBOImpl implements TherapySessionSchedulingB
     PatientsDAO patientsDAO = (PatientsDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.PATIENTS);
     TherapyProgramsDAO therapyProgramsDAO = (TherapyProgramsDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.THERAPIST_PROGRAM);
     TherapistDAO therapistDAO = (TherapistDAO) DAOFactory.getInstance().getDAO(DAOFactory.DAOTypes.THERAPIST);
+
     @Override
     public boolean saveTherapySession(TherapySessionsDTO therapySessionsDTO) throws IOException {
-
         Patients patients = patientsDAO.getbyId(therapySessionsDTO.getPatient());
         TherapyPrograms therapyPrograms = therapyProgramsDAO.getbyId(therapySessionsDTO.getProgram());
         Therapists therapists = therapistDAO.getbyId(therapySessionsDTO.getTherapy());

@@ -11,13 +11,13 @@
 
 <AnchorPane prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.PaymentInvoiceManagementController">
    <children>
-      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="409.0" layoutY="195.0" onAction="#saveOnAction" style="-fx-background-color: yellow;" text="Save">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="478.0" layoutY="142.0" onAction="#saveOnAction" style="-fx-background-color: yellow;" text="Save">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
 <!--      <JFXTextField fx:id="txtPayment" layoutX="280.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="cost" text="payment" />-->
-      <TextField fx:id="txtPayment" layoutX="280.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="cost" text="payment" />
+      <TextField fx:id="txtPayment" layoutX="318.0" layoutY="149.0" prefHeight="25.0" prefWidth="108.0" />
       <TableView fx:id="tblPayment" layoutX="47.0" layoutY="243.0" onMouseClicked="#tableOnAction" prefHeight="149.0" prefWidth="507.0">
          <columns>
             <TableColumn fx:id="colTherapy" prefWidth="141.0" text="Theropy" />
@@ -26,8 +26,8 @@
             <TableColumn fx:id="colStatus" prefWidth="104.0" text="Status" />
          </columns>
       </TableView>
-      <ComboBox fx:id="cmbTherapy" layoutX="33.0" layoutY="147.0" prefHeight="25.0" prefWidth="100.0" promptText="theropy" />
-      <ComboBox fx:id="cmbPatient" layoutX="152.0" layoutY="147.0" prefHeight="25.0" prefWidth="100.0" promptText="patient" />
+      <ComboBox fx:id="cmbTherapy" layoutX="111.0" layoutY="147.0" prefHeight="25.0" prefWidth="100.0" />
+      <ComboBox fx:id="cmbPatient" layoutX="111.0" layoutY="201.0" prefHeight="25.0" prefWidth="100.0" />
       <JFXButton buttonType="RAISED" layoutX="388.0" layoutY="399.0" onAction="#generateReportOnAction" style="-fx-background-color: red;" text="Generate Report">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -39,7 +39,7 @@
          </font>
       </Label>
       <Label fx:id="lblId" layoutX="83.0" layoutY="97.0" text="Label" />
-      <TextField fx:id="txtStatus" layoutX="412.0" layoutY="147.0" prefHeight="25.0" prefWidth="108.0" promptText="status" text="status" />
+      <TextField fx:id="txtStatus" layoutX="318.0" layoutY="201.0" prefHeight="25.0" prefWidth="108.0" />
       <JFXButton buttonType="RAISED" layoutX="478.0" layoutY="195.0" onAction="#resetOnAction" style="-fx-background-color: lightgreen;" text="Reset">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -54,5 +54,25 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label layoutX="33.0" layoutY="151.0" text="Therapy Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="203.0" text="Patient Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="203.0" text="Status">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="152.0" text="Cost">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

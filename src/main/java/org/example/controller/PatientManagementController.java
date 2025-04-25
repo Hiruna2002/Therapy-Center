@@ -1,7 +1,6 @@
 package org.example.controller;
 
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,7 +9,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import org.example.bo.BOFactory;
-import org.example.bo.SuperBO;
 import org.example.bo.custom.PatientManagementBO;
 import org.example.dto.PatientsDTO;
 import org.example.tm.PatientsTm;
@@ -34,7 +32,6 @@ public class PatientManagementController implements Initializable {
     public TableColumn<PatientsTm,String> colDescription;
     public TextField txtDescription;
     public Label lblId;
-    public TextField txtSearch;
 
     PatientManagementBO patientManagementBO = (PatientManagementBO) BOFactory.getInstance().getBO(BOFactory.BOTypes.PATIENTS);
 
@@ -55,7 +52,6 @@ public class PatientManagementController implements Initializable {
         txtDescription.clear();
         txtCost.clear();
         txtDuration.clear();
-        txtSearch.clear();
     }
 
     private void loadIds() {
@@ -94,11 +90,7 @@ public class PatientManagementController implements Initializable {
         boolean ccost= Pattern.matches("^-?\\d*\\.\\d+$",cost);
 
         String description = txtDescription.getText();
-//        boolean cdescription = Pattern.matches("^[A-Za-z0-9]+$\n",description);
-//        if (!cdescription){
-//            txtDescription.setStyle("-fx-text-fill: RED");
-//            return;
-//        }
+
         String id = lblId.getText();
 
         if (name== null || duration == null || cost== null || description==null){
@@ -142,6 +134,7 @@ public class PatientManagementController implements Initializable {
     }
     public void tblOnAction(MouseEvent mouseEvent) {
         PatientsTm selectedItem = tblPatients.getSelectionModel().getSelectedItem();
+
         txtName.setText(selectedItem.getName());
         txtDuration.setText(selectedItem.getDuration());
         txtCost.setText(String.valueOf(selectedItem.getCost()));
@@ -169,20 +162,6 @@ public class PatientManagementController implements Initializable {
             btnSave.setText("Update");
         }
 
-    }
-
-    public void searchOnAction(ActionEvent actionEvent) {
-        try {
-            String text = txtSearch.getText();
-            List<PatientsDTO> patientsDTOS = patientManagementBO.searchPatient(text);
-            ObservableList<PatientsTm> objects = FXCollections.observableArrayList();
-            for (PatientsDTO patientsDTO : patientsDTOS) {
-                objects.add(new PatientsTm(patientsDTO.getName(), patientsDTO.getDuration(), patientsDTO.getCost(), patientsDTO.getDescription()));
-            }
-            tblPatients.setItems(objects);
-        }catch (IOException e){
-            throw new RuntimeException(e);
-        }
     }
 
     public void resetOnAction(ActionEvent actionEvent) {

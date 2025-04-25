@@ -9,27 +9,27 @@
 
 <AnchorPane prefHeight="469.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.TherapySessionSchedulingController">
    <children>
-      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="395.0" layoutY="200.0" onAction="#saveOnAction" style="-fx-background-color: yellow;" text="Save">
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="470.0" layoutY="186.0" onAction="#saveOnAction" style="-fx-background-color: yellow;" text="Save">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="477.0" layoutY="199.0" onAction="#resetOnAction" style="-fx-background-color: lightgreen;" text="Reset">
+      <JFXButton buttonType="RAISED" layoutX="467.0" layoutY="263.0" onAction="#resetOnAction" style="-fx-background-color: lightgreen;" text="Reset">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </JFXButton>
-      <TextField fx:id="txtCost" layoutX="26.0" layoutY="288.0" prefHeight="25.0" prefWidth="236.0" promptText="cost" />
-      <TextField fx:id="txtDescription" layoutX="25.0" layoutY="338.0" prefHeight="25.0" prefWidth="236.0" promptText="description" text="description" />
-      <ComboBox fx:id="cmbTerapy" layoutX="26.0" layoutY="137.0" prefHeight="35.0" prefWidth="236.0" promptText="therapy " />
-      <ComboBox fx:id="cmbPatient" layoutX="25.0" layoutY="188.0" prefHeight="28.0" prefWidth="236.0" promptText="patient" />
+      <TextField fx:id="txtCost" layoutX="170.0" layoutY="289.0" prefHeight="25.0" prefWidth="236.0" />
+      <TextField fx:id="txtDescription" layoutX="170.0" layoutY="335.0" prefHeight="25.0" prefWidth="236.0" />
+      <ComboBox fx:id="cmbTerapy" layoutX="170.0" layoutY="139.0" prefHeight="35.0" prefWidth="236.0" />
+      <ComboBox fx:id="cmbPatient" layoutX="170.0" layoutY="189.0" prefHeight="28.0" prefWidth="236.0" />
       <Label layoutX="41.0" layoutY="83.0" text="Id:">
          <font>
             <Font name="System Bold" size="19.0" />
          </font>
       </Label>
       <Label fx:id="lblId" layoutX="73.0" layoutY="88.0" text="Label" />
-      <ComboBox fx:id="cmbProgram" layoutX="26.0" layoutY="234.0" prefHeight="28.0" prefWidth="236.0" promptText="program" />
+      <ComboBox fx:id="cmbProgram" layoutX="170.0" layoutY="235.0" prefHeight="28.0" prefWidth="236.0" />
       <AnchorPane layoutX="-3.0" layoutY="-3.0" prefHeight="76.0" prefWidth="606.0" style="-fx-background-color: lightblue;">
          <children>
             <Label layoutX="195.0" layoutY="24.0" text="Therapy Session Scheduling">
@@ -39,5 +39,30 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label layoutX="27.0" layoutY="146.0" text="Therapy Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="193.0" text="Patient Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="239.0" text="Therapy Program Id">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="292.0" text="Cost">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="338.0" text="Description">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

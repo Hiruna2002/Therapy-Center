@@ -33,18 +33,14 @@ public class AdminDashboardController{
     }
 
     public void therapistOnAction(ActionEvent event) throws IOException {
-//        dashAnc.getChildren().clear();
-//        Parent load = FXMLLoader.load(getClass().getResource("/views/TherapistManagementForm.fxml"));
-//        dashAnc.getChildren().add(load);
         dashAnc.getChildren().clear();
-        AnchorPane load = FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"));
+        Parent load = FXMLLoader.load(getClass().getResource("/views/TherapistManagementForm.fxml"));
         dashAnc.getChildren().add(load);
 
     }
 
-//    public void setValue(String name, String password) {
+//    public void setValue(String name) {
 //        lblName.setText(name);
-//        lblPassword.setText(password);
 //    }
 
     public void changeCredentialsOnAction(ActionEvent actionEvent) {

@@ -1,7 +1,5 @@
 package org.example.controller;
 
-import com.jfoenix.controls.JFXPasswordField;
-import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -10,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import org.example.bo.BOFactory;
@@ -46,6 +45,7 @@ public class LoginFormController implements Initializable {
         boolean cname = Pattern.matches("^[A-Za-z]+$",name);
         if (!cname){
             txtName.setStyle("-fx-text-fill: RED");
+            Alert alert = new Alert(Alert.AlertType.ERROR,"Invalid User Name");
             return;
         }
         String password = txtPassword.getText();
@@ -87,9 +87,11 @@ public class LoginFormController implements Initializable {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/views/AdminDashboardForm.fxml"));
                 Parent load = fxmlLoader.load();
 //                AdminDashboardController controller = fxmlLoader.getController();
-//                controller.setValue(name, hashpassword);
+//                controller.setValue(name);
                 Stage stage = new Stage();
                 Scene scene = new Scene(load);
+                stage.setTitle(name);
+                stage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/icon.png")));
                 stage.setScene(scene);
                 stage.show();
             } else {
@@ -101,6 +103,8 @@ public class LoginFormController implements Initializable {
 //                controller.setValues(name, hashpassword);
                 Stage stage = new Stage();
                 Scene scene = new Scene(load);
+                stage.setTitle(name);
+                stage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/icon.png")));
                 stage.setScene(scene);
                 stage.show();
             }

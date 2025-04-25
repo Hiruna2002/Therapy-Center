@@ -16,7 +16,7 @@ public class TherapySessionsDAOImpl implements TherapySessionsDAO {
         Session session = FactoryConfiguration.getInstance().openSession();
         Transaction transaction = session.beginTransaction();
 
-        session.persist(therapySessions);
+        session.merge(therapySessions);
 
         transaction.commit();
         session.close();

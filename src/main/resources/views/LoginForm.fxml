@@ -5,6 +5,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -41,6 +43,12 @@
       <ComboBox fx:id="cmbUserRole" layoutX="186.0" layoutY="221.0" prefHeight="25.0" prefWidth="140.0" promptText="Select Job Role" />
       <TextField fx:id="txtName" layoutX="182.0" layoutY="106.0" />
       <PasswordField fx:id="txtPassword" layoutX="182.0" layoutY="164.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="350.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="112.0" fitWidth="200.0" layoutX="372.0" layoutY="110.0">
+         <image>
+            <Image url="@../assets/mentol therapy.jpg" />
+         </image>
+      </ImageView>
 <!--      <JFXPasswordField fx:id="txtPassword" layoutX="189.0" layoutY="164.0" promptText="password" />-->
    </children>
 </AnchorPane>

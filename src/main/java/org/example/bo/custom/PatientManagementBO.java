@@ -17,5 +17,4 @@ public interface PatientManagementBO extends SuperBO {
 
     boolean deletePatient(String text) throws IOException;
 
-    List<PatientsDTO> searchPatient(String text) throws IOException;
 }

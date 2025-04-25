@@ -95,15 +95,11 @@ public class  TherapySessionSchedulingController implements Initializable {
         String cost = txtCost.getText();
         boolean ccost= Pattern.matches("^-?\\d*\\.\\d+$",cost);
         if (!ccost){
-            txtCost.setStyle("-fx-text-fill: RED");
+            new Alert(Alert.AlertType.ERROR,"Invalid cost type");
             return;
         }
         String description = txtDescription.getText();
-//        boolean cdescription = Pattern.matches("^[A-Za-z0-9]+$\n",description);
-//        if (!cdescription){
-//            txtDescription.setStyle("-fx-text-fill: RED");
-//            return;
-//        }
+
         String id = lblId.getText();
 
         if (patient== null || therapy == null || program== null || cost==null || description==null){

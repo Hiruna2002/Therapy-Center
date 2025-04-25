@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.example.config.FactoryConfiguration;
 import org.example.entity.Users;
@@ -25,6 +26,8 @@ public class AppInitializer extends Application {
         Parent load = FXMLLoader.load(getClass().getResource("/views/LoginForm.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(load);
+        stage.setTitle("Therapy Center");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/assets/mentol therapy.jpg")));
         stage.setScene(scene);
         stage.show();
 

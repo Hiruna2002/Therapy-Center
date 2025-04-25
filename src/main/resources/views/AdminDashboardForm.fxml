@@ -8,25 +8,25 @@
 
 <AnchorPane prefHeight="528.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AdminDashboardController">
    <children>
-      <AnchorPane fx:id="dashAnc" layoutX="222.0" prefHeight="528.0" prefWidth="566.0" />
-      <AnchorPane prefHeight="528.0" prefWidth="223.0" style="-fx-background-color: lightblue;">
+      <AnchorPane fx:id="dashAnc" layoutX="200.0" prefHeight="528.0" prefWidth="588.0" />
+      <AnchorPane prefHeight="528.0" prefWidth="202.0" style="-fx-background-color: yellow;">
          <children>
-            <JFXButton layoutX="25.0" layoutY="107.0" onAction="#therapistOnAction" prefHeight="59.0" prefWidth="96.0" style="-fx-background-color: lightblue;" text="Therapist" textFill="#a18989">
+            <JFXButton layoutX="25.0" layoutY="107.0" onAction="#therapistOnAction" prefHeight="59.0" prefWidth="96.0" style="-fx-background-color: yellow;" text="Therapist" textFill="#a18989">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="14.0" layoutY="264.0" onAction="#patientHistoryOnAction" prefHeight="59.0" prefWidth="155.0" style="-fx-background-color: lightblue;" text="Patient History" textFill="#a18989">
+            <JFXButton layoutX="14.0" layoutY="264.0" onAction="#patientHistoryOnAction" prefHeight="59.0" prefWidth="155.0" style="-fx-background-color: yellow;" text="Patient History" textFill="#a18989">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="8.0" layoutY="189.0" onAction="#theropyProgramOnAction" prefHeight="59.0" prefWidth="183.0" style="-fx-background-color: lightblue;" text="Therapy Program" textFill="#a18989">
+            <JFXButton layoutX="8.0" layoutY="189.0" onAction="#theropyProgramOnAction" prefHeight="59.0" prefWidth="183.0" style="-fx-background-color: yellow;" text="Therapy Program" textFill="#a18989">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="12.0" layoutY="339.0" onAction="#changeCredentialsOnAction" prefHeight="59.0" prefWidth="175.0" style="-fx-background-color: lightblue;" text="Change Credentials&#10;" textFill="#a18989">
+            <JFXButton layoutX="12.0" layoutY="339.0" onAction="#changeCredentialsOnAction" prefHeight="59.0" prefWidth="175.0" style="-fx-background-color: yellow;" text="Change Credentials&#10;" textFill="#a18989">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

@@ -16,7 +16,7 @@ public class PaymentsDAOImpl implements PaymentsDAO {
         Session session = FactoryConfiguration.getInstance().openSession();
         Transaction transaction = session.beginTransaction();
 
-        session.persist(payments);
+        session.merge(payments);
 
         transaction.commit();
         session.close();
